@@ -31,6 +31,7 @@ export const Button = (props) => {
 					className={`absolute ${props.animateSecondArrow}`}
 					fill='#FFFFFF'
 					d='M157.2,138.2v10.7l-21.3-16l21.3-16v10.7'
+					// eslint-disable-next-line react/no-unknown-property
 					transform-origin={props.origin}
 					transform={props.location1}
 				></path>
@@ -38,6 +39,7 @@ export const Button = (props) => {
 					className={`absolute ${props.animateFirstArrow}`}
 					fill='#FFFFFF'
 					d='M157.2,138.2v10.7l-21.3-16l21.3-16v10.7'
+					// eslint-disable-next-line react/no-unknown-property
 					transform-origin={props.origin}
 					transform={props.location2}
 				></path>
