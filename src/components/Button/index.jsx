@@ -15,24 +15,28 @@ export const Button = (props) => {
 	}
 	return (
 		<svg
-			className={`absolute ${props.position} w-20 h-20 cursor-pointer group`}
+			className={`absolute ${
+				props.isLeft ? 'left-5' : 'right-5'
+			} w-20 h-20 cursor-pointer z-30 group`}
 			viewBox='0 0 266 266'
-			x='0px'
-			y='0px'
+			x='0'
+			y='0'
 			version='1.1'
 			xmlns='http://www.w3.org/2000/svg'
 			onMouseOver={() => changeMouseOverR()}
 			onMouseLeave={() => changeMouseLeaveR()}
+			onClick={props.previousPage}
+			ref={props.sliderRef}
 		>
 			<circle cx='133' cy='133' r='111' ref={circle} className='opacity-25' />
 			<g>
-				<rect x={props.barX} y={props.barY} width='6' height='40' fill='#FFFFFF'></rect>
+				<rect x={props.isLeft ? '106' : '155'} y='113' width='6' height='40' fill='#FFFFFF'></rect>
 				<path
 					className={`absolute ${props.animateSecondArrow}`}
 					fill='#FFFFFF'
 					d='M157.2,138.2v10.7l-21.3-16l21.3-16v10.7'
 					// eslint-disable-next-line react/no-unknown-property
-					transform-origin={props.origin}
+					transform-origin='0 133'
 					transform={props.location1}
 				></path>
 				<path
@@ -40,7 +44,7 @@ export const Button = (props) => {
 					fill='#FFFFFF'
 					d='M157.2,138.2v10.7l-21.3-16l21.3-16v10.7'
 					// eslint-disable-next-line react/no-unknown-property
-					transform-origin={props.origin}
+					transform-origin='0 133'
 					transform={props.location2}
 				></path>
 			</g>
