@@ -25,7 +25,7 @@ export const Button = (props) => {
 			xmlns='http://www.w3.org/2000/svg'
 			onMouseOver={() => changeMouseOverR()}
 			onMouseLeave={() => changeMouseLeaveR()}
-			onClick={props.previousPage}
+			onClick={props.previousPage ? props.previousPage : props.nextPage}
 			ref={props.sliderRef}
 		>
 			<circle cx='133' cy='133' r='111' ref={circle} className='opacity-25' />

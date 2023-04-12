@@ -5,7 +5,7 @@ import ContentSlide from './components/ContentSlide'
 import { useSlide } from './hooks/useSlide'
 
 function App() {
-	const { slider, previous } = useSlide()
+	const { slider, previous, next } = useSlide()
 
 	return (
 		<div className='h-screen w-screen flex items-center relative overflow-hidden'>
@@ -25,6 +25,7 @@ function App() {
 				animateSecondArrow='group-hover:animate-translateSecondArrowRight'
 				location1='translate(288,0), rotate(180)'
 				location2='translate(266,0), rotate(180)'
+				nextPage={next}
 			/>
 		</div>
 	)
