@@ -37,6 +37,33 @@ module.exports = {
 				translateFirstArrowRight: 'translateFirstArrowRight .20s ease-in',
 				translateSecondArrowRight: 'translateSecondArrowRight .10s ease-out',
 			},
+			height: {
+				'1/2': '2px',
+			},
+			width: {
+				98: '26rem',
+				100: '28rem',
+			},
+			inset: {
+				'0.6/5': '12%',
+				'0.7/5': '14%',
+				'0.8/5': '16%',
+				'0.9/5': '18%',
+				'1/5': '20%',
+				'1.1/5': '22%',
+				'1.2/5': '24%',
+				'2/5': '40%',
+				'2.2/5': '44%',
+				'2.6/5': '52%',
+			},
+			fontSize: {
+				'base-sm': '0.945rem',
+				'2.5xl': '1.75rem',
+				'5.3xl': '3.17rem',
+			},
+			colors: {
+				'logi-blue': '#00B8FC',
+			},
 		},
 	},
 	plugins: [],
