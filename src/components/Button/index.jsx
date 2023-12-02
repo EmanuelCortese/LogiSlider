@@ -17,7 +17,7 @@ export const Button = (props) => {
 		<svg
 			className={`absolute ${
 				props.isLeft ? 'left-5' : 'right-5'
-			} w-20 h-20 cursor-pointer z-30 group`}
+			} w-32 h-32 cursor-pointer z-30 group`}
 			viewBox='0 0 266 266'
 			x='0'
 			y='0'
