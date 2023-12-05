@@ -28,12 +28,12 @@ export const Banner = ({ props }) => {
 	return (
 		<div className={`flex items-center justify-center absolute h-full w-full`}>
 			<div
-				className={` flex flex-col font-banner  absolute  z-10 ${gapY} ${flexItems} ${textAling} ${top} ${bottom} ${left}`}
+				className={` flex flex-col font-LLBrown  absolute  z-10 ${gapY} ${flexItems} ${textAling} ${top} ${bottom} ${left}`}
 			>
 				{logo && <img src={logo} className={`${logoWidth}`} />}
 
 				<h2
-					className={`uppercase ${textColor} ${textSize} font-semibold leading-none  whitespace-pre-line`}
+					className={`uppercase ${textColor} ${textSize} font-bold leading-none  whitespace-pre-line`}
 				>
 					{title && title}
 				</h2>
@@ -56,7 +56,7 @@ export const Banner = ({ props }) => {
 
 				{button && (
 					<button
-						className={`rounded font-semibold uppercase border-2 border-logi-blue bg-logi-blue hover:bg-black hover:text-logi-blue transition-all duration-500 ${buttonWidth} ${buttonPaddingX} ${buttonPaddingY} ${buttonTextSize} ${buttonColor} `}
+						className={`rounded font-bold uppercase border-2 border-logi-blue bg-logi-blue hover:bg-zinc-900/5 hover:text-logi-blue hover:font-bold transition-all duration-500 ${buttonWidth} ${buttonPaddingX} ${buttonPaddingY} ${buttonTextSize} ${buttonColor} `}
 					>
 						{buttonDescription && buttonDescription}
 					</button>
