@@ -1,6 +1,6 @@
 export const descriptionStyles = {
 	desc_2: {
-		descFontWeight: 'font-light',
+		descFontWeight: 'font-regular',
 		descColor: 'text-slate-50',
 	},
 	desc_3: {
@@ -8,7 +8,7 @@ export const descriptionStyles = {
 		descColor: 'text-slate-50',
 	},
 	desc_4: {
-		descFontWeight: 'font-semibold',
+		descFontWeight: 'font-regular',
 		descColor: 'text-gray-800',
 		descTransform: 'uppercase',
 		descFontSize: 'text-base-sm',
