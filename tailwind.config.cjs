@@ -56,6 +56,9 @@ module.exports = {
 				'2.2/5': '44%',
 				'2.6/5': '52%',
 			},
+			fontFamily: {
+				LLBrown: ['LL-Brown'],
+			},
 			fontSize: {
 				'base-sm': '0.945rem',
 				'2.5xl': '1.75rem',
