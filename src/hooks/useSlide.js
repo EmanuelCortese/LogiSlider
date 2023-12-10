@@ -1,22 +1,24 @@
-import { useEffect, useRef } from 'react'
+import { useContext, useEffect, useRef } from 'react'
+import { mediaList } from '../components/mediaList'
+import Context from '../context/IndexContext'
 import { TIMER_SLIDE } from '../utils/constants'
 
 export const useSlide = () => {
 	const slider = useRef()
-
-	let interval = null
-
-	const autoplay = () => {
-		clearInterval(interval)
-		interval = setInterval(previous, TIMER_SLIDE)
-	}
+	const { index, setIndex } = useContext(Context)
 
 	useEffect(() => {
-		autoplay()
-	}, [])
+		const interval = setInterval(previous, TIMER_SLIDE)
+
+		return () => clearInterval(interval)
+	}, [index])
 
 	const previous = () => {
-		autoplay()
+		setIndex((index) => {
+			if (index === 0) return mediaList.length - 1
+			return index - 1
+		})
+
 		const sliderWidth = slider.current.offsetWidth
 		const firstElement = slider.current.firstChild
 		const lastElement = slider.current.lastChild
@@ -32,7 +34,10 @@ export const useSlide = () => {
 	}
 
 	const next = () => {
-		autoplay()
+		setIndex((index) => {
+			if (index >= mediaList.length - 1) return 0
+			return index + 1
+		})
 		const sliderWidth = slider.current.offsetWidth
 		slider.current.style.transform = `translateX(-${sliderWidth}px)`
 		slider.current.style.transition = 'transform .5s ease-out'
