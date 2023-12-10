@@ -37,7 +37,7 @@ export const bannerStyles = {
 		textAling: 'text-center',
 		gapY: 'gap-y-3',
 		position: {
-			top: 'top-0.6/5',
+			top: 'top-1/5',
 			bottom: '',
 			left: '',
 			right: '',
