@@ -2,6 +2,7 @@ import './App.css'
 
 import { Button } from './components/Button'
 import ContentSlide from './components/ContentSlide'
+import { Header } from './components/Header'
 import { useSlide } from './hooks/useSlide'
 
 function App() {
@@ -9,6 +10,7 @@ function App() {
 
 	return (
 		<div className='h-screen w-screen flex items-center relative overflow-hidden'>
+			<Header />
 			<Button
 				animatedDottedCircle='group-hover:animate-leftDottedCircleRotate'
 				animateFirstArrow='group-hover:animate-translateFirstArrowLeft'
