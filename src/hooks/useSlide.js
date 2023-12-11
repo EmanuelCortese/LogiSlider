@@ -1,4 +1,4 @@
-import { useContext, useEffect, useRef } from 'react'
+import { useContext, useEffect, useRef, useState } from 'react'
 import { mediaList } from '../components/mediaList'
 import Context from '../context/IndexContext'
 import { TIMER_SLIDE } from '../utils/constants'
@@ -6,13 +6,21 @@ import { TIMER_SLIDE } from '../utils/constants'
 export const useSlide = () => {
 	const slider = useRef()
 	const { index, setIndex } = useContext(Context)
+	const [isPlaying, setIsPlaying] = useState(true)
+
+	let interval
 
 	useEffect(() => {
-		const interval = setInterval(previous, TIMER_SLIDE)
-
+		if (isPlaying) interval = setInterval(previous, TIMER_SLIDE)
 		return () => clearInterval(interval)
-	}, [index])
+	}, [index, isPlaying])
 
+	const handleButton = () => {
+		setIsPlaying(!isPlaying)
+		if (isPlaying) {
+			clearInterval(interval)
+		}
+	}
 	const previous = () => {
 		setIndex((index) => {
 			if (index === 0) return mediaList.length - 1
@@ -55,5 +63,5 @@ export const useSlide = () => {
 		slider.current.addEventListener('transitionend', transition)
 	}
 
-	return { slider, previous, next }
+	return { handleButton, isPlaying, slider, previous, next }
 }
