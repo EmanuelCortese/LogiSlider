@@ -2,6 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+	.scrollbar::-webkit-scrollbar {
+		width: 10px;
+		height: 20px;
+	}
+
+	.scrollbar::-webkit-scrollbar-track {
+		border-radius: 100%;
+		background: #ffffff;
+	}
+
+	.scrollbar::-webkit-scrollbar-thumb {
+		background: #00b8fc;
+		border-radius: 100vh;
+		border: 1px solid #00b8fc;
+	}
+}
+
 @font-face {
 	font-family: 'LL-Brown';
 	src: url('/fonts/LL-Brown-Thin.woff2') format('woff2');
