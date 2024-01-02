@@ -3,6 +3,7 @@ import './App.css'
 import { Button } from './components/Button'
 import ContentSlide from './components/ContentSlide'
 import { Header } from './components/Header'
+import { PopupMessage } from './components/Message'
 import { useSlide } from './hooks/useSlide'
 import { Pause } from './icons/Pause'
 import { Play } from './icons/Play'
@@ -31,6 +32,7 @@ function App() {
 				location2='translate(266,0), rotate(180)'
 				nextPage={next}
 			/>
+			<PopupMessage />
 			<button
 				onClick={handleButton}
 				className='flex items-center justify-center absolute bottom-6 right-6 h-10 w-10 z-10 bg-zinc-400/80 border-2 rounded-full border-zinc-800/80 hover:bg-zinc-400 transition-colors duration-500'
