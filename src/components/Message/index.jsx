@@ -1,11 +1,13 @@
 import { useContext } from 'react'
 import messageImg from '../../assets/message.png'
-import Context from '../../context/IndexContext'
+import SliderContext from '../../context/SliderContext'
 import { useAnimationStatus } from '../../hooks/useAnimationStatus'
 import { ModalMessage } from '../ModalMessage'
 
 export const PopupMessage = () => {
-	const { modal } = useContext(Context)
+	const {
+		state: { modal },
+	} = useContext(SliderContext)
 	const { animationStatus } = useAnimationStatus()
 
 	return (

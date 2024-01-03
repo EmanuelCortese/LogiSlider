@@ -1,9 +1,12 @@
 import { useContext } from 'react'
-import Context from '../../context/IndexContext'
+import SliderContext from '../../context/SliderContext'
 import { Logo } from '../../icons/Logo'
 
 export const Header = () => {
-	const { index } = useContext(Context)
+	const {
+		state: { index },
+	} = useContext(SliderContext)
+
 	return (
 		<div className='flex items-center justify-center h-24 w-full absolute top-[24px] z-10'>
 			<div className='flex items-center justify-around h-full w-[87%] '>

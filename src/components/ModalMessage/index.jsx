@@ -1,6 +1,6 @@
 import { useContext, useRef } from 'react'
 import LogitechMessage from '../../assets/Logitech_logo_message.png'
-import Context from '../../context/IndexContext'
+import SliderContext from '../../context/SliderContext'
 import { useAnimationStatus } from '../../hooks/useAnimationStatus'
 import { useChangeBorder } from '../../hooks/useChangeBorder'
 import { useVisibility } from '../../hooks/useVisibility'
@@ -15,7 +15,9 @@ import { dateFormatter } from '../../utils/dateFormatter'
 export const ModalMessage = () => {
 	const form = useRef()
 
-	const { modal } = useContext(Context)
+	const {
+		state: { modal },
+	} = useContext(SliderContext)
 
 	const { addBorder, removeBorder } = useChangeBorder({ ref: form })
 	const { visibility, tag } = useVisibility()

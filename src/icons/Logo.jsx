@@ -1,8 +1,10 @@
 import { useContext } from 'react'
-import Context from '../context/IndexContext'
+import SliderContext from '../context/SliderContext'
 
 export const Logo = () => {
-	const { index } = useContext(Context)
+	const {
+		state: { index },
+	} = useContext(SliderContext)
 	return (
 		<div className='flex items-center p-2'>
 			<svg
