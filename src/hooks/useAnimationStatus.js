@@ -1,11 +1,14 @@
 import { useContext } from 'react'
-import Context from '../context/IndexContext'
+import SliderContext from '../context/SliderContext'
 
 export const useAnimationStatus = () => {
-	const { setModal } = useContext(Context)
+	const {
+		state: { modal },
+		dispatch,
+	} = useContext(SliderContext)
 
 	const animationStatus = () => {
-		setModal((modal) => !modal)
+		dispatch({ type: 'update_modal', payload: !modal })
 	}
 
 	return { animationStatus }

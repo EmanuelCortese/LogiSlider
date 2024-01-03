@@ -1,11 +1,14 @@
 import { useContext, useEffect, useRef, useState } from 'react'
 import { mediaList } from '../components/mediaList'
-import Context from '../context/IndexContext'
+import SliderContext from '../context/SliderContext'
 import { TIMER_SLIDE } from '../utils/constants'
 
 export const useSlide = () => {
 	const slider = useRef()
-	const { index, setIndex } = useContext(Context)
+	const {
+		state: { index },
+		dispatch,
+	} = useContext(SliderContext)
 	const [isPlaying, setIsPlaying] = useState(true)
 
 	let interval
@@ -22,9 +25,10 @@ export const useSlide = () => {
 		}
 	}
 	const previous = () => {
-		setIndex((index) => {
-			if (index === 0) return mediaList.length - 1
-			return index - 1
+		const indexResult = index === 0 ? mediaList.length - 1 : index - 1
+		dispatch({
+			type: 'update_index',
+			payload: indexResult,
 		})
 
 		const sliderWidth = slider.current.offsetWidth
@@ -42,9 +46,10 @@ export const useSlide = () => {
 	}
 
 	const next = () => {
-		setIndex((index) => {
-			if (index >= mediaList.length - 1) return 0
-			return index + 1
+		const indexResult = index >= mediaList.length - 1 ? 0 : index + 1
+		dispatch({
+			type: 'update_index',
+			payload: indexResult,
 		})
 		const sliderWidth = slider.current.offsetWidth
 		slider.current.style.transform = `translateX(-${sliderWidth}px)`
