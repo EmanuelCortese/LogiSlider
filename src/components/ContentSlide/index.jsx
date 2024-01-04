@@ -1,9 +1,9 @@
-import { fullSize } from '../../utils/constants'
-import { isVideo } from '../../utils/isVideo'
-import { Banner } from '../Banner/Banner'
-import Image from '../Image'
-import Video from '../Video'
-import { mediaList } from '../mediaList'
+import { Banner } from '@/components/Banner/Banner'
+import Image from '@/components/Image'
+import Video from '@/components/Video'
+import { mediaList } from '@/components/mediaList'
+import { fullSize } from '@/utils/constants'
+import { isVideo } from '@/utils/isVideo'
 
 const ContentSlide = ({ refSlide }) => (
 	<div ref={refSlide} className={`flex ${fullSize}`}>

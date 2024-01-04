@@ -1,5 +1,5 @@
+import SliderContext from '@/context/SliderContext'
 import { useContext } from 'react'
-import SliderContext from '../context/SliderContext'
 
 export const Logo = () => {
 	const {

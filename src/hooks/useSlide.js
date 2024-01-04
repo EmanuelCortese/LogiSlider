@@ -1,7 +1,7 @@
+import { mediaList } from '@/components/mediaList'
+import SliderContext from '@/context/SliderContext'
+import { TIMER_SLIDE } from '@/utils/constants'
 import { useContext, useEffect, useRef, useState } from 'react'
-import { mediaList } from '../components/mediaList'
-import SliderContext from '../context/SliderContext'
-import { TIMER_SLIDE } from '../utils/constants'
 
 export const useSlide = () => {
 	const slider = useRef()

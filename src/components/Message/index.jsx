@@ -1,8 +1,8 @@
+import messageImg from '@/assets/message.png'
+import { ModalMessage } from '@/components/ModalMessage'
+import SliderContext from '@/context/SliderContext'
+import { useAnimationStatus } from '@/hooks/useAnimationStatus'
 import { useContext } from 'react'
-import messageImg from '../../assets/message.png'
-import SliderContext from '../../context/SliderContext'
-import { useAnimationStatus } from '../../hooks/useAnimationStatus'
-import { ModalMessage } from '../ModalMessage'
 
 export const PopupMessage = () => {
 	const {

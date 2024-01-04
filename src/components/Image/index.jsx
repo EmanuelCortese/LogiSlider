@@ -1,4 +1,4 @@
-import { sizeAndFill } from '../../utils/constants'
+import { sizeAndFill } from '@/utils/constants'
 
 const Image = ({ src }) => <img src={src} className={`${sizeAndFill}`} />
 

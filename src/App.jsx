@@ -1,12 +1,10 @@
-import './App.css'
-
-import { Button } from './components/Button'
-import ContentSlide from './components/ContentSlide'
-import { Header } from './components/Header'
-import { PopupMessage } from './components/Message'
-import { useSlide } from './hooks/useSlide'
-import { Pause } from './icons/Pause'
-import { Play } from './icons/Play'
+import { Button } from '@/components/Button'
+import ContentSlide from '@/components/ContentSlide'
+import { Header } from '@/components/Header'
+import { PopupMessage } from '@/components/Message'
+import { useSlide } from '@/hooks/useSlide'
+import { Pause } from '@/icons/Pause'
+import { Play } from '@/icons/Play'
 
 function App() {
 	const { isPlaying, slider, previous, next, handleButton } = useSlide()

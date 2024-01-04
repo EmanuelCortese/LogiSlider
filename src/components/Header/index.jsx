@@ -1,6 +1,6 @@
+import SliderContext from '@/context/SliderContext'
+import { Logo } from '@/icons/Logo'
 import { useContext } from 'react'
-import SliderContext from '../../context/SliderContext'
-import { Logo } from '../../icons/Logo'
 
 export const Header = () => {
 	const {

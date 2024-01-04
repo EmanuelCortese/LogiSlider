@@ -1,4 +1,4 @@
-import { DATE_OPTIONS } from './constants'
+import { DATE_OPTIONS } from '@/utils/constants'
 
 export const dateFormatter = () => {
 	const date = new Date()
