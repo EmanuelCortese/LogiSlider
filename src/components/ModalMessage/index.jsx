@@ -27,55 +27,57 @@ export const ModalMessage = () => {
 
 	return (
 		<div
-			className={`flex flex-col gap-y-4 w-[434px] h-[640px] fixed bottom-4 right-[150px] z-30 bg-[#FFFFFF] rounded-3xl shadow-[0_0_12px_rgba(0,0,0,.15)] font-sans ${ANIMATE_CONDITION} origin-bottom-right delay-1000 opacity-0 scale-0`}
+			className={`flex flex-col gap-y-4 w-full h-full bottom-0 right-0 fixed z-30 bg-[#FFFFFF]  shadow-[0_0_12px_rgba(0,0,0,.15)] font-sans ${ANIMATE_CONDITION} origin-bottom-right delay-1000 opacity-0 scale-0 tablet:w-[365px] tablet:h-[490px] tablet:right-32 tablet:rounded-3xl tablet:bottom-4 desktop:w-[410px] desktop:h-[640px] desktop:right-[150px]`}
 		>
-			<header className='h-16 w-full flex items-center justify-evenly bg-[#2F3132]  rounded-tl-3xl rounded-tr-3xl px-[16px] gap-x-4'>
-				<img src={LogitechMessage} alt='' className='h-8 w-8' />
+			<header className='h-16 w-full flex items-center justify-evenly bg-[#2F3132] px-[16px] gap-x-4 relative tablet:rounded-tl-3xl tablet:rounded-tr-3xl'>
+				<img src={LogitechMessage} alt='' className='h-6 w-6 tablet:h-8 tablet:w-8' />
 				<span className='flex items-center h-full text-white font-semibold text-sm tracking-[-.12px] w-full'>
 					Ayuda de ventas de Logitech G
 				</span>
 				<div
-					className='rounded-full hover:bg-[#f4f6f8]/20 h-8 w-8 cursor-pointer flex justify-center items-center p-1 min-w-[32px]'
+					className='w-5 h-5 rounded-full hover:bg-[#f4f6f8]/20 cursor-pointer flex justify-center items-center p-1 min-w-[32px] tablet:h-8 tablet:w-8'
 					onClick={animationStatus}
 				>
 					<Close />
 				</div>
 			</header>
 
-			<main className='flex flex-col w-full h-[520px] overflow-y-auto overflow-x-hidden'>
-				<div className='flex justify-center w-full h-[16.8px] text-xs text-[#b2b2b2] uppercase font-semibold  mt-[25px] mb-[15px]'>
-					{dateFormatter()}
-				</div>
-				<div className='flex items-center w-full'>
-					<div className='p-4  w-[237px] break-words text-sm  relative left-12  bg-[#f4f6f8] rounded-t-xl rounded-br-xl'>
-						<span className='text-[#212b36]'>
-							{`¡Hola! 👋 Mi nombre es Ollie, su bot de soporte de ventas de Logitech. Estoy aquí para ayudarlo lo mejor que pueda o conectarlo con un agente en vivo. Están disponibles las 24 horas, los 7 días de la semana, para ayudarlo si no puedo responder a sus preguntas. 🙂`}
-						</span>
-						<br />
-						<br />
-						<span className=' text-sm text-[#212b36]'>
-							{`Al continuar utilizando este chatbot, comprende que esta conversación se graba y puede reproducirse en un punto posterior para fines de garantía de calidad.`}
-						</span>
-						<br />
-						<br />
-						<span className='text-sm text-[#212b36]'>
-							{`Si está listo para comenzar, diga 'Hola' y podemos comenzar.`}
-						</span>
+			<main className='w-full max-h-[calc(100%-120px)] h-[calc(100%-120px)] relative overflow-x-hidden overflow-y-auto flex-1'>
+				<div className='flex flex-col w-full h-auto min-h-[468.68px] max-h-full tablet:min-h-0 absolute bottom-0'>
+					<div className='flex justify-center w-full h-[16.8px] text-xs text-[#b2b2b2] uppercase font-semibold  mt-[25px] mb-[15px]'>
+						{dateFormatter()}
+					</div>
+					<div className='flex items-center w-full'>
+						<div className='relative left-0.6/5 p-4  w-[237px] break-words text-sm bg-[#f4f6f8] rounded-t-xl rounded-br-xl tablet:left-12'>
+							<span className='text-[#212b36]'>
+								{`¡Hola! 👋 Mi nombre es Ollie, su bot de soporte de ventas de Logitech. Estoy aquí para ayudarlo lo mejor que pueda o conectarlo con un agente en vivo. Están disponibles las 24 horas, los 7 días de la semana, para ayudarlo si no puedo responder a sus preguntas. 🙂`}
+							</span>
+							<br />
+							<br />
+							<span className=' text-sm text-[#212b36]'>
+								{`Al continuar utilizando este chatbot, comprende que esta conversación se graba y puede reproducirse en un punto posterior para fines de garantía de calidad.`}
+							</span>
+							<br />
+							<br />
+							<span className='text-sm text-[#212b36]'>
+								{`Si está listo para comenzar, diga 'Hola' y podemos comenzar.`}
+							</span>
+						</div>
 					</div>
 				</div>
 			</main>
 
-			<footer className=' flex items-center justify-evenly  w-full h-auto min-h-[56px] bg-[#FFFFFF] rounded-br-3xl rounded-bl-3xl pb-3'>
+			<footer className='flex items-center gap-8 w-full h-auto min-h-[56px] bg-[#FFFFFF] rounded-br-3xl rounded-bl-3xl relative pb-2'>
 				<div className='rounded-full hover:bg-[#f4f6f8] h-9 w-9 cursor-pointer flex justify-center items-center'>
 					<Plus />
 				</div>
 				<form
 					action='#'
-					className=' flex items-center  justify-center w-[370px] border-2 border-[rgba(71,69,123,.12)] bg-[#FFFFFF] rounded-3xl'
+					className=' flex items-center  justify-center  w-[calc(100%-72px)] border-2 border-[rgba(71,69,123,.12)] bg-[#FFFFFF] rounded-3xl'
 					ref={form}
 				>
 					<textarea
-						className='w-[94%] overflow-x-hidden   resize-none border-none outline-none p-2  rounded-3xl text-sm scrollbar whitespace-pre-wrap'
+						className='w-[94%] overflow-x-hidden  resize-none border-none outline-none p-2  rounded-3xl text-sm scrollbar whitespace-pre-wrap'
 						name=''
 						rows={1}
 						wrap='hard'

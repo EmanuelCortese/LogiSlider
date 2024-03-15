@@ -18,6 +18,449 @@
 		border-radius: 100vh;
 		border: 1px solid #00b8fc;
 	}
+
+	/* BANNERS STYLES */
+
+	/*------------------------------------------ Basic styles ---------------------------------------------------------*/
+
+	/* Banner container styles */
+	.container-1 {
+		@apply items-center gap-y-2 bottom-[18%];
+	}
+
+	.container-2 {
+		@apply items-center text-center gap-y-3 bottom-0.9/5;
+	}
+
+	.container-3 {
+		@apply items-start gap-y-3 top-1/4 left-0.6/5;
+	}
+
+	.container-4 {
+		@apply items-center text-center gap-y-2  top-0.7/5;
+	}
+
+	.container-5 {
+		@apply items-center text-center gap-y-3 top-[56%];
+	}
+
+	.container-6 {
+		@apply items-start gap-y-1 top-1/5 left-[10%];
+	}
+
+	.container-7 {
+		@apply items-center gap-y-4 top-1/5;
+	}
+
+	.container-8 {
+		@apply items-center gap-y-3 top-1/5;
+	}
+
+	/* Banner logo styles */
+	.logo-7 {
+		@apply w-24;
+	}
+
+	.logo-8 {
+		@apply w-52;
+	}
+
+	/* Banner title styles */
+	.title-1 {
+		@apply text-lg text-slate-50;
+	}
+	.title-2 {
+		@apply text-base text-slate-50;
+	}
+	.title-3 {
+		@apply text-sm text-slate-50;
+	}
+	.title-4 {
+		@apply text-[22px] text-gray-800;
+	}
+	.title-5 {
+		@apply text-xl text-slate-50;
+	}
+	.title-6 {
+		@apply text-[10px] text-slate-50;
+	}
+	.title-7 {
+		@apply text-[11px] text-slate-50;
+	}
+	.title-8 {
+		@apply text-[26px] text-slate-50;
+	}
+
+	/* Banner subtitle styles */
+	.subtitle-4 {
+		@apply font-bold text-gray-800 uppercase text-xs;
+	}
+	.subtitle-6 {
+		@apply text-xl text-slate-50;
+	}
+
+	/* Banner description styles */
+	.description-2 {
+		@apply w-full text-xs font-normal;
+	}
+	.description-3 {
+		@apply text-xs font-light;
+	}
+	.description-5 {
+		@apply w-full text-xs font-light;
+	}
+
+	/* Banner button styles */
+	.button-1 {
+		@apply w-40 h-10 text-xs px-3 py-2;
+	}
+	.button-2 {
+		@apply text-xs px-3 py-[10px];
+	}
+	.button-3 {
+		@apply text-[10px] px-2 py-1;
+	}
+	.button-4 {
+		@apply w-56 text-[10px] px-1 py-1.5;
+	}
+	.button-5 {
+		@apply w-60 text-[9px] py-2;
+	}
+	.button-6 {
+		@apply text-gray-800 text-[8px] px-2 py-1;
+	}
+	.button-7 {
+		@apply w-32 text-[10px] px-2 py-2;
+	}
+	.button-8 {
+		@apply w-56 text-[8px] px-0 py-3;
+	}
+
+	/*------------------------------------------ Mobile styles ---------------------------------------------------------*/
+	@screen mobile {
+		/* First banner mobile styles */
+		.container-1 {
+			@apply gap-y-3;
+		}
+
+		.title-1 {
+			@apply text-xl;
+		}
+
+		.button-1 {
+			@apply w-44 h-11 text-[13px];
+		}
+		/* ------------------------------- */
+
+		/* Third banner mobile styles */
+		.title-3 {
+			@apply text-xl;
+		}
+		/* ------------------------------- */
+
+		.description-3 {
+			@apply text-xs;
+		}
+
+		.button-3 {
+			@apply text-[11px] px-3 py-2;
+		}
+		/* ------------------------------- */
+
+		/* Seventh banner mobile styles */
+		.logo-7 {
+			@apply w-28;
+		}
+
+		.title-7 {
+			@apply text-[13px];
+		}
+
+		.button-7 {
+			@apply w-40 text-xs px-3 py-3;
+		}
+		/* ------------------------------- */
+
+		/* Eighth banner mobile styles */
+		.logo-8 {
+			@apply w-60;
+		}
+
+		.title-8 {
+			@apply text-3xl;
+		}
+
+		.button-8 {
+			@apply w-[278px] text-[9px];
+		}
+	}
+
+	/*------------------------------------------- Tablet styles --------------------------------------------------------*/
+	@screen tablet {
+		/* First banner tablet styles */
+		.title-1 {
+			@apply text-2xl;
+		}
+
+		.button-1 {
+			@apply w-[170px];
+		}
+		/* ----------------------------- */
+
+		/* Second banner tablet styles */
+		.title-2 {
+			@apply text-2xl;
+		}
+
+		.description-2 {
+			@apply text-base;
+		}
+
+		.button-2 {
+			@apply text-sm px-4 py-3;
+		}
+		/* ---------------------------- */
+
+		/* Third banner tablet styles */
+		.title-3 {
+			@apply text-3xl;
+		}
+
+		.description-3 {
+			@apply text-[15px];
+		}
+
+		.button-3 {
+			@apply text-sm px-5 py-3;
+		}
+		/* ----------------------------- */
+
+		/* Fourth banner tablet styles */
+		.container-4 {
+			@apply gap-y-4;
+		}
+		.title-4 {
+			@apply text-2.5xl;
+		}
+
+		.subtitle-4 {
+			@apply text-base-sm;
+		}
+
+		.button-4 {
+			@apply w-72 text-xs px-1 py-1.5;
+		}
+		/* ------------------------------ */
+
+		/* Fifth banner tablet styles */
+		.container-5 {
+			@apply top-2.6/5;
+		}
+
+		.title-5 {
+			@apply text-[27px];
+		}
+
+		.description-5 {
+			@apply text-sm;
+		}
+
+		.button-5 {
+			@apply w-[328px] text-xs py-3;
+		}
+		/* ------------------------------ */
+
+		/* Sixth banner tablet styles */
+		.container-6 {
+			@apply gap-y-2 top-2/5 left-1.2/5;
+		}
+
+		.title-6 {
+			@apply text-sm;
+		}
+		.subtitle-6 {
+			@apply text-3xl;
+		}
+
+		.button-6 {
+			@apply text-[10px] px-4 py-2;
+		}
+		/* ------------------------------ */
+
+		/* Seventh banner tablet styles */
+		.container-7 {
+			@apply gap-y-6 top-2/5;
+		}
+
+		.logo-7 {
+			@apply w-[154px];
+		}
+
+		.title-7 {
+			@apply text-xl;
+		}
+
+		.button-7 {
+			@apply w-48 text-sm  px-4 py-4;
+		}
+		/* ------------------------------ */
+
+		/* Eighth banner tablet styles*/
+		.container-8 {
+			@apply gap-y-4 top-2/5;
+		}
+
+		.logo-8 {
+			@apply w-[352px];
+		}
+
+		.title-8 {
+			@apply text-[42px];
+		}
+
+		.button-8 {
+			@apply w-[363px] text-xs px-0 py-4;
+		}
+	}
+
+	/*------------------------------------------- Laptop styles ---------------------------------------------------------*/
+
+	@screen laptop {
+		/* First banner laptop styles */
+		.title-1 {
+			@apply text-[28px];
+		}
+
+		.button-1 {
+			@apply w-48 h-[52px] text-sm;
+		}
+		/* ------------------------------ */
+
+		/* Second banner laptop styles */
+		.container-2 {
+			@apply gap-y-4;
+		}
+
+		.title-2 {
+			@apply text-4xl;
+		}
+
+		.description-2 {
+			@apply text-lg;
+		}
+
+		.button-2 {
+			@apply px-6 py-4;
+		}
+
+		/* Third banner laptop styles */
+		.title-3 {
+			@apply text-[40px];
+		}
+
+		.description-3 {
+			@apply text-lg;
+		}
+
+		.button-3 {
+			@apply text-sm px-6 py-4;
+		}
+		/* ------------------------------ */
+
+		/* Fifth banner laptop styles */
+
+		.container-5 {
+			@apply gap-y-5 top-2.6/5;
+		}
+		.title-5 {
+			@apply text-3xl;
+		}
+		.description-5 {
+			@apply text-base;
+		}
+		.button-5 {
+			@apply w-98 text-sm  py-3;
+		}
+		/* ------------------------------ */
+
+		/* Sixth banner laptop styles */
+		.container-6 {
+			@apply gap-y-3.5 top-2/5 left-1.2/5;
+		}
+
+		.title-6 {
+			@apply text-lg;
+		}
+
+		.subtitle-6 {
+			@apply text-5xl;
+		}
+
+		.button-6 {
+			@apply text-sm px-6 py-4;
+		}
+		/* -------------------------------- */
+
+		/* Seventh banner laptop styles */
+		.container-7 {
+			@apply gap-y-7;
+		}
+
+		.logo-7 {
+			@apply w-[180px];
+		}
+
+		.title-7 {
+			@apply text-2xl;
+		}
+
+		.button-7 {
+			@apply w-52 text-sm;
+		}
+		/* -------------------------------- */
+
+		/* Eighth banner laptop styles */
+		.logo-8 {
+			@apply w-98;
+		}
+
+		.title-8 {
+			@apply text-5xl;
+		}
+
+		.button-8 {
+			@apply w-100 text-sm;
+		}
+	}
+
+	/*------------------------------------------- Desktop styles --------------------------------------------------------*/
+	@screen desktop {
+		/* Third banner desktop styles */
+		.container-3 {
+			@apply top-2/5 left-1/5;
+		}
+		.title-3 {
+			@apply text-5.3xl;
+		}
+		/* ------------------------------ */
+
+		/* Seventh banner desktop styles */
+		.container-7 {
+			@apply gap-y-8;
+		}
+
+		.logo-7 {
+			@apply w-52;
+		}
+
+		.title-7 {
+			@apply text-3xl;
+		}
+
+		.button-7 {
+			@apply w-[216px] text-[15px];
+		}
+	}
 }
 
 @font-face {

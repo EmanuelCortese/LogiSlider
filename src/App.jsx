@@ -33,7 +33,7 @@ function App() {
 			<PopupMessage />
 			<button
 				onClick={handleButton}
-				className='flex items-center justify-center absolute bottom-6 right-6 h-10 w-10 z-10 bg-zinc-400/80 border-2 rounded-full border-zinc-800/80 hover:bg-zinc-400 transition-colors duration-500'
+				className='flex items-center justify-center absolute bottom-4 right-3 w-10 h-10 tablet:right-6  tablet:h-16 tablet:w-16 z-10 bg-zinc-400/80 border-2 rounded-full border-zinc-800/80 hover:bg-zinc-400 transition-colors duration-500'
 			>
 				{isPlaying ? <Pause /> : <Play />}
 			</button>

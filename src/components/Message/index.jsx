@@ -14,7 +14,7 @@ export const PopupMessage = () => {
 		<>
 			<ModalMessage />
 			<button
-				className={`h-16 w-16 z-10 fixed bottom-4 right-[150px] ${
+				className={`w-10 h-10 z-10 fixed bottom-4 right-14 tablet:right-28 tablet:h-16 tablet:w-16 desktop:right-[150px] ${
 					modal ? 'animate-hideButton' : 'animate-showButton'
 				}`}
 				onClick={animationStatus}
