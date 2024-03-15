@@ -1,64 +1,41 @@
-export const Banner = ({ props }) => {
-	const { logo, title, subTitle, description, button, buttonDescription, details, styles } = props
-
-	const {
-		position: { bottom, top, left },
-		textAling,
-		flexItems,
-		gapY,
-	} = styles.bannerStyle
-
-	const { logoWidth } = styles.logoStyle
-
-	const {
-		textSize,
-		textColor,
-		subTitleStyle: { subTitleSize, subTitleColor },
-	} = styles.titleStyle
-
-	const {
-		buttonColor,
-		buttonTextSize,
-		buttonPadding: { buttonPaddingX, buttonPaddingY },
-		buttonWidth,
-	} = styles.buttonStyle
-
-	const { descColor, descTransform, descFontWeight, descFontSize } = styles.descriptionStyle
+export const Banner = ({
+	props: { logo, title, subTitle, description, button, details, classes },
+}) => {
+	const { containerClass, titleClass, logoClass, subtitleClass, descriptionClass, buttonClass } =
+		classes
 
 	return (
 		<div className={`flex items-center justify-center absolute h-full w-full`}>
-			<div
-				className={` flex flex-col font-LLBrown  absolute  z-10 ${gapY} ${flexItems} ${textAling} ${top} ${bottom} ${left}`}
-			>
-				{logo && <img src={logo} className={`${logoWidth}`} />}
+			<div className={`flex flex-col font-LLBrown  absolute  z-10 w-11/12 ${containerClass}`}>
+				{logo && <img src={logo} className={`${logoClass}`} />}
 
-				<h2
-					className={`uppercase ${textColor} ${textSize} font-bold leading-none  whitespace-pre-line`}
-				>
-					{title && title}
-				</h2>
+				{title && (
+					<h2 className={`uppercase font-bold leading-none whitespace-pre-line ${titleClass}`}>
+						{title}
+					</h2>
+				)}
 
 				{subTitle && (
-					<h3
-						className={`${subTitleSize} ${subTitleColor} font-bold whitespace-pre-line uppercase`}
-					>
+					<h3 className={`font-bold whitespace-pre-line uppercase ${subtitleClass} `}>
 						{subTitle}
 					</h3>
 				)}
 
-				<p
-					className={`${descColor} ${descTransform} ${descFontWeight} ${descFontSize} whitespace-pre-line`}
-				>
-					{description && description}
-				</p>
+				{description && (
+					<p className={`whitespace-pre-line w-4/5 text-slate-50 ${descriptionClass}`}>
+						{description}
+					</p>
+				)}
 
-				{details && <span className={`w-20 h-1.5 mb-3 bg-slate-400`}></span>}
+				{details && (
+					<span className={`w-16 h-1.5 mb-3 bg-slate-400 tablet:w-[72px] desktop:w-20`}></span>
+				)}
 
 				{button && (
 					<button
-						className={`rounded font-bold uppercase border-2 border-logi-blue bg-logi-blue hover:bg-zinc-900/5 hover:text-logi-blue hover:font-bold transition-all duration-500 ${buttonWidth} ${buttonPaddingX} ${buttonPaddingY} ${buttonTextSize} ${buttonColor} `}
+						className={`rounded font-bold uppercase border-2 text-gray-800 border-logi-blue bg-logi-blue hover:bg-zinc-900/5 hover:text-logi-blue hover:font-bold transition-colors duration-500 ${buttonClass}`}
 					>
-						{buttonDescription && buttonDescription}
+						{button}
 					</button>
 				)}
 			</div>
