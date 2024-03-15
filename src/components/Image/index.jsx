@@ -1,5 +1,5 @@
-import { sizeAndFill } from '@/utils/constants'
+import { sizeAndResize } from '@/utils/constants'
 
-const Image = ({ src }) => <img src={src} className={`${sizeAndFill}`} />
+const Image = ({ src }) => <img src={src} className={`${sizeAndResize}`} />
 
 export default Image

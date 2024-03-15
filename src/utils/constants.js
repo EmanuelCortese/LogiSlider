@@ -1,8 +1,8 @@
 export const fullSize = 'min-h-full min-w-full'
 
-const objFill = 'object-fill'
+const objFitProp = 'object-cover'
 
-export const sizeAndFill = `${fullSize} ${objFill}`
+export const sizeAndResize = `${fullSize} ${objFitProp}`
 
 export const TIMER_SLIDE = 4000
 
