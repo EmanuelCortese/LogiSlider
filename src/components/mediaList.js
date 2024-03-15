@@ -8,11 +8,6 @@ import img4 from '@/assets/Logitech_LoL.png'
 import video2 from '@/assets/videos/Logitech_G_923.mp4'
 import video1 from '@/assets/videos/Logitech_G_Fits.mp4'
 import video3 from '@/assets/videos/Logitech_G_LoL_KDA.mp4'
-import { bannerStyles } from '@/styles/bannerStyles'
-import { buttonStyles } from '@/styles/buttonStyles'
-import { descriptionStyles } from '@/styles/descriptionStyles'
-import { logoStyles } from '@/styles/logoStyles'
-import { titleStyles } from '@/styles/titleStyles'
 
 export const mediaList = [
 	{
@@ -20,17 +15,17 @@ export const mediaList = [
 		media: img1,
 		logo: null,
 		title: 'Divulgue o seu jogo',
-		subTitle: '',
-		description: '',
-		button: true,
-		buttonDescription: 'conheça o vantum',
+		subTitle: null,
+		description: null,
+		button: 'conheça o vantum',
 		details: false,
-		styles: {
-			bannerStyle: bannerStyles.banner_1,
-			titleStyle: titleStyles.title_1,
-			buttonStyle: buttonStyles.button_1,
-			descriptionStyle: {},
-			logoStyle: {},
+		classes: {
+			containerClass: 'container-1',
+			logoClass: '',
+			titleClass: 'title-1',
+			subtitleClass: '',
+			descriptionClass: '',
+			buttonClass: 'button-1',
 		},
 	},
 	{
@@ -38,17 +33,17 @@ export const mediaList = [
 		media: video1,
 		logo: null,
 		title: `Ajuste perfecto para la\ndiversión`,
-		subTitle: '',
+		subTitle: null,
 		description: 'Audífonos inalámbricos para juegos que se amoldan para ajustarse a tus oídos',
-		button: true,
-		buttonDescription: 'Presentamos Fits',
+		button: 'Presentamos Fits',
 		details: false,
-		styles: {
-			bannerStyle: bannerStyles.banner_2,
-			titleStyle: titleStyles.title_2,
-			buttonStyle: buttonStyles.button_2,
-			descriptionStyle: descriptionStyles.desc_2,
-			logoStyle: {},
+		classes: {
+			containerClass: 'container-2',
+			logoClass: '',
+			titleClass: 'title-2',
+			subtitleClass: '',
+			descriptionClass: 'description-2',
+			buttonClass: 'button-2',
 		},
 	},
 	{
@@ -56,17 +51,17 @@ export const mediaList = [
 		media: img2,
 		logo: null,
 		title: 'Un icono. renovado.',
-		subTitle: '',
+		subTitle: null,
 		description: `La gama G502 X.\nEl diseño del legendario G502 renovado\ncon tecnología para juegos pionera.`,
-		button: true,
-		buttonDescription: 'Presentamos la gama G502 X',
+		button: 'Presentamos la gama G502 X',
 		details: false,
-		styles: {
-			bannerStyle: bannerStyles.banner_3,
-			titleStyle: titleStyles.title_3,
-			buttonStyle: buttonStyles.button_3,
-			descriptionStyle: descriptionStyles.desc_3,
-			logoStyle: {},
+		classes: {
+			containerClass: 'container-3',
+			logoClass: '',
+			titleClass: 'title-3',
+			subtitleClass: '',
+			descriptionClass: 'description-3',
+			buttonClass: 'button-3',
 		},
 	},
 	{
@@ -75,15 +70,16 @@ export const mediaList = [
 		logo: null,
 		title: 'Juega a tu manera',
 		subTitle: 'Presentamos The Aurora Collection',
-		button: true,
-		buttonDescription: 'Descúbrela y personaliza a tu gusto',
+		description: null,
+		button: 'Descúbrela y personaliza a tu gusto',
 		details: false,
-		styles: {
-			bannerStyle: bannerStyles.banner_4,
-			titleStyle: titleStyles.title_4,
-			buttonStyle: buttonStyles.button_4,
-			descriptionStyle: descriptionStyles.desc_4,
-			logoStyle: {},
+		classes: {
+			containerClass: 'container-4',
+			logoClass: '',
+			titleClass: 'title-4',
+			subtitleClass: 'subtitle-4',
+			descriptionClass: '',
+			buttonClass: 'button-4',
 		},
 	},
 	{
@@ -91,18 +87,18 @@ export const mediaList = [
 		media: img4,
 		logo: null,
 		title: 'Juega con legends',
-		subTitle: '',
+		subTitle: null,
 		description:
 			'Creada por arte de magia. Perfeccionada por la ciencia. Utilizada por\ncampeones. Presentamos la Colección League of Legends.',
-		button: true,
-		buttonDescription: 'Explorar colecciones League of Legends',
+		button: 'Explorar colecciones League of Legends',
 		details: false,
-		styles: {
-			bannerStyle: bannerStyles.banner_5,
-			titleStyle: titleStyles.title_5,
-			buttonStyle: buttonStyles.button_5,
-			descriptionStyle: descriptionStyles.desc_5,
-			logoStyle: {},
+		classes: {
+			containerClass: 'container-5',
+			logoClass: '',
+			titleClass: 'title-5',
+			subtitleClass: '',
+			descriptionClass: 'description-5',
+			buttonClass: 'button-5',
 		},
 	},
 	{
@@ -111,16 +107,16 @@ export const mediaList = [
 		logo: null,
 		title: 'Pro con Lightspeed',
 		subTitle: 'Pro X\ninalámbricos',
-		description: '',
-		button: true,
-		buttonDescription: 'Más sobre inalámbricos Pro',
+		description: null,
+		button: 'Más sobre inalámbricos Pro',
 		details: true,
-		styles: {
-			bannerStyle: bannerStyles.banner_6,
-			titleStyle: titleStyles.title_6,
-			buttonStyle: buttonStyles.button_6,
-			descriptionStyle: {},
-			logoStyle: {},
+		classes: {
+			containerClass: 'container-6',
+			logoClass: '',
+			titleClass: 'title-6',
+			subtitleClass: 'subtitle-6',
+			descriptionClass: '',
+			buttonClass: 'button-6',
 		},
 	},
 	{
@@ -128,17 +124,17 @@ export const mediaList = [
 		media: video2,
 		logo: g923Logo,
 		title: 'Force feedback de próxima generación',
-		subTitle: '',
-		description: '',
-		button: true,
-		buttonDescription: 'Presentamos G923',
+		subTitle: null,
+		description: null,
+		button: 'Presentamos G923',
 		details: false,
-		styles: {
-			bannerStyle: bannerStyles.banner_7,
-			titleStyle: titleStyles.title_7,
-			buttonStyle: buttonStyles.button_7,
-			descriptionStyle: {},
-			logoStyle: logoStyles.logo_7,
+		classes: {
+			containerClass: 'container-7',
+			logoClass: 'logo-7',
+			titleClass: 'title-7',
+			subtitleClass: '',
+			descriptionClass: '',
+			buttonClass: 'button-7',
 		},
 	},
 	{
@@ -146,17 +142,17 @@ export const mediaList = [
 		media: video3,
 		logo: LoLKda,
 		title: 'Juega al tope',
-		subTitle: '',
-		description: '',
-		button: true,
-		buttonDescription: 'Explora dispositivos y accesorios K/DA ahora',
+		subTitle: null,
+		description: null,
+		button: 'Explora dispositivos y accesorios K/DA ahora',
 		details: false,
-		styles: {
-			bannerStyle: bannerStyles.banner_8,
-			titleStyle: titleStyles.title_8,
-			buttonStyle: buttonStyles.button_8,
-			descriptionStyle: {},
-			logoStyle: logoStyles.logo_8,
+		classes: {
+			containerClass: 'container-8',
+			logoClass: 'logo-8',
+			titleClass: 'title-8',
+			subtitleClass: '',
+			descriptionClass: '',
+			buttonClass: 'button-8',
 		},
 	},
 ]
